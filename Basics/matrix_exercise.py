@@ -12,6 +12,40 @@ m = [[0, 0, 0],
      [0, 0, 0],
      [0, 0, 0]]
 
+n = [[0, 0, 0],
+     [0, 0, 0],
+     [0, 0, 0]]
+
+# Matrix Addition
+
 for i in range(0, len(m1)):
-      for j in range(0, len(i)):
-            m[i][j]
+      for j in range(len(m1[0])):
+            m[i][j] = m1[i][j] + m2[i][j]
+
+print(m)
+
+
+# Matrix Multiplication
+
+for i in range(0, len(m1)):
+    for j in range(len(m2[0])):
+        for k in range(len(m2)):
+            n[i][j] += m1[i][k] * m2[k][j]
+
+print(n)
+
+# Matrix Product
+
+a = [[2, 5, 7], [3, 6], [8], [4, 9]]
+prod = 1
+
+for i in a:
+    for j in range(len(i)):
+        prod *= i[j]
+
+print(prod)
+
+
+
+
+
